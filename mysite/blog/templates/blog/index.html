@@ -1,0 +1,9 @@
+{% if posts %}
+    <ul>
+    {% for post in posts %}
+        <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
