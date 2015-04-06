@@ -1,1 +1,7 @@
-{{article.created}}
+{% extends "blog/base.html" %}
+
+
+{% block blog_entries %}
+	<h1>{{article.title}}</h1>
+	<p>{{article.post_body}}</p>
+{% endblock %}

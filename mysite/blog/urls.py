@@ -6,6 +6,6 @@ urlpatterns = [
     # url(r'^$', 'mysite.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^$', views.Index, name="index"),
-    url(r'^(?P<article_id>[0-9]+)/$', views.Article, name="article"),
+    url(r'^(?P<article_slug>[\w\-]+)/$', views.Article, name="article"),
   
 ]
