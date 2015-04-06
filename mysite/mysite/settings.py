@@ -101,3 +101,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
+# with this, your media directory will be the same directory than your settings.py file
+# you can also use a standard path like "/var/www/media"
+# IMPORTANT : In any case, you have to create the directory by hand
+MEDIA_ROOT = os.path.join(PROJECT_PATH, "media")
+MEDIA_URL = "/media/"
