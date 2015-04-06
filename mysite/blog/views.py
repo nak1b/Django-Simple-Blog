@@ -7,5 +7,9 @@ def Index(request):
 	context = {'posts': posts}
 	return  render(request, 'blog/index.html', context)
 	
+def Article(request, article_id):
+	article = models.PostEntry.objects.get(id=article_id)
+	context = {'article' : article}
+	return render(request, 'blog/article.html', context)
 
 # Create your views here.
