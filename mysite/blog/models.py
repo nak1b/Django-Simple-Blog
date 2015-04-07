@@ -9,9 +9,9 @@ class PostEntryQuery(models.QuerySet):
 
 class PostEntry(models.Model):
 	title = models.CharField(max_length=200)
-	hero_image = models.ImageField(upload_to='med/blogphotos/%Y/%m/%d')
+	hero_image = models.ImageField(upload_to='blog/media/')
 	post_body = models.TextField()
-	post_image = models.ImageField(upload_to='media/blogphotos/%Y/%m/%d', blank=True)
+	post_image = models.ImageField(upload_to='blog/media/', blank=True)
 	author = models.CharField(max_length=30)
 	created = models.DateTimeField('date published')
 	slug = models.SlugField(max_length=200, unique=True)
