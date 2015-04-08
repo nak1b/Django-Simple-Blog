@@ -32,6 +32,8 @@
 
 .blog-post{
     margin-bottom: 30px;
+    text-align: justify;
+    line-height: 1.6em;
 }
 
 .blog-post h1{
@@ -54,6 +56,18 @@
     color: rgba(36, 35, 35, 0.86);
 }
 
+.read-more{
+    font-weight: 500;
+    border-color:#333;
+    margin-top: 10px;
+}
+
+
+.read-more:hover{
+    background: #B6B6B6;
+    color: white;
+}
+
 .blog-post .post-author, .blog-post .post-time{
     padding-right: 10px;
 }
@@ -62,9 +76,9 @@ img{
     max-width: 100%;
 }
 
-.hero_image{
-    width: 620px;
-    height: 230px;
+.hero_image, .single_post_hero_image{
+    width: 100%;
+    min-height: 180px;
     margin: 5px 0px 15px 0;
 
 }
@@ -130,7 +144,7 @@ img{
 }
 
 
-
+/* Random posts ends*/
 
 
 
@@ -186,6 +200,25 @@ img{
 
     .blog-post h1{
         font-size: 1.8em;
+    }
+
+    .hero_image{
+        width: 460px;
+        height: 259px;
+        margin: 5px 0 15px 20px;
+        float: right;
+        border: 1px solid #e3e3e3;
+        padding: 10px;
+    }
+
+    .single_post_hero_image{
+        width: 100%;
+        max-height: 376px;
+        padding: 15px;
+        border: 1px solid #e3e3e3;
+        margin: 5px auto;
+        margin-bottom: 15px;
+        float: none;
     }
 
 }

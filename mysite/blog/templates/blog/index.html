@@ -8,8 +8,8 @@
             <h1><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h1>
             <p class="blog-post-meta"><span class="post-time"><i class="fa fa-clock-o"></i> {{post.created | date:'j F Y'}} </span><span class="post-author"> By <i class="fa fa-user"></i> <a href="#">{{post.author}}</a></span></p>
             <img src="{{post.hero_image.url}}" class="hero_image">
-            <p>{{ post.post_body| truncatechars:500 }}</p>
-            <a href="/blog/{{ post.slug }}/" class="btn btn-default">Read More</a>      
+            <p>{{ post.post_body| markdown | truncatewords:200 }}</p>
+            <a href="/blog/{{ post.slug }}/" class="btn btn-default read-more">Continue Reading &raquo;</a>      
         </div>
     {% endfor %}
 {% else %}
