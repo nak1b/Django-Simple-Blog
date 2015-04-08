@@ -6,7 +6,18 @@
 	{% block blog_entries %}
 		<div class="col-lg-12 blog-post">
             <h1>{{ article.title }}</h1>
-            <p class="blog-post-meta"><span class="post-time"><i class="fa fa-clock-o"></i> {{article.created | date:'j F Y'}} </span><span class="post-author"> By <i class="fa fa-user"></i> <a href="#">{{article.author}}</a></span></p>
+            <p class="blog-post-meta">
+            	<span class="post-time">
+            		<i class="fa fa-clock-o"></i> {{article.created | date:'j F Y'}}
+            	</span>
+            	<span class="post-author"> 
+            		By <i class="fa fa-user"></i> <a href="#">{{article.author}}</a>
+            	</span>
+            	<span class="tags">
+            		<i class="fa fa-tags"></i>{{article.tags.all | join:", "}}
+            	</span>
+
+            </p>
             <img src="/blog/{{article.hero_image.url}}" class="single_post_hero_image">
           	{{ article.post_body | markdown }}
             {% if article.post_image %} 

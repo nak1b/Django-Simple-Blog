@@ -15,6 +15,12 @@ class PostEntryQuery(models.QuerySet):
 		return self.published().latest('created')
 	
 
+class PostTag(models.Model):
+	tag = models.CharField(max_length=30)
+
+	def __str__(self):
+		return self.tag
+
 
 class PostEntry(models.Model):
 	title = models.CharField(max_length=200)
@@ -26,6 +32,7 @@ class PostEntry(models.Model):
 	slug = models.SlugField(max_length=200, unique=True)
 	published = models.BooleanField(default=True)
 
+	tags = models.ManyToManyField(PostTag)
 	objects = PostEntryQuery.as_manager()
 
 	def __str__(self):

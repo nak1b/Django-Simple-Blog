@@ -68,9 +68,20 @@
     color: white;
 }
 
-.blog-post .post-author, .blog-post .post-time{
-    padding-right: 10px;
+.blog-post-meta{
+    width: 600px;
 }
+
+.blog-post-meta i{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+.blog-post .post-author, .blog-post .post-time, .tags{
+    margin-right: 20px;
+}
+
 
 img{
     max-width: 100%;

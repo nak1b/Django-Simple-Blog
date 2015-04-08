@@ -17,4 +17,5 @@ class EntryAdmin(MarkdownModelAdmin):
 # 	prepopulated_fields = {"slug": ("title",)}
 
 admin.site.register(models.PostEntry, EntryAdmin)
+admin.site.register(models.PostTag)
 # Register your models here.
