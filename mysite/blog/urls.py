@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^$', views.Index, name="index"),
     url(r'^(?P<article_slug>[\w\-]+)/$', views.Article, name="article"),
     
+    
   
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
