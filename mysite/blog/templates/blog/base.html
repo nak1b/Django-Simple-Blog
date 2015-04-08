@@ -39,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Django Blog</a>               
+                <a class="navbar-brand" href="/blog">Django Blog</a>               
             </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,8 +62,21 @@
               	   {% block blog_entries %} {% endblock %}
       
                 </div>
+
+
+                  
             </div>
+           
         </div>
+
+        <div id="related-posts">
+            <div class="container-fluid">
+                <h2>Related Posts</h2>
+                <div class="row">
+                  {% include "blog/randomArticle.html" %}
+                </div>
+            </div>           
+        </div>   
         <!-- /#page-content-wrapper -->
 
     </div>

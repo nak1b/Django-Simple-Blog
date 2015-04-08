@@ -6,6 +6,11 @@
     padding-left: 30px;
 }
 
+.navbar-brand{
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
+}
+
 #navigation li{
     color:#999999;
 }
@@ -27,6 +32,10 @@
 
 .blog-post{
     margin-bottom: 30px;
+}
+
+.blog-post h1{
+    font-size: 1.5em;
 }
 
 .blog-post img{
@@ -59,6 +68,69 @@ img{
 
 }
 
+/* Random posts section*/
+
+#related-posts{
+    margin-top: 40px;
+    border-top: #DBDBDB;
+    background: #f4f4f4;
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+#related-posts h2{
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  letter-spacing: 0.25em;
+}
+
+.menu>li>a{
+    letter-spacing: 0.1em;
+}
+
+.thumbnail {
+    position:relative;
+    overflow:hidden;
+}
+ 
+.thumbnail img{
+    height: 170px;
+    width: 100%;
+}
+
+.caption {
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(0, 0, 0, 0.7);
+    width:100%;
+    height:100%;
+    padding:2%;
+    display: none;
+    text-align:center;
+    color:#fff !important;
+    z-index:2;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+}
+
+.caption h4{
+    padding-top: 10px;
+    line-height: 1.5em;
+    letter-spacing: 0.2em;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+.caption i{
+    padding-top: 15px;
+    font-size: 2em;
+}
+
+
+
+
 
 
 @media(min-width:768px) {
@@ -72,11 +144,13 @@ img{
     }
 
     
-    #page-content-wrapper {
+    #page-content-wrapper, #related-posts {
         padding: 20px;
         position: relative;
     }
-
+    #related-posts{
+       padding-top: 0px;
+    }
     #navigation{
         float: none;
         width: 250px;
@@ -89,6 +163,13 @@ img{
         float: none;
     }
 
+    .navbar-brand{
+        width:250px;
+        background: rgb(47, 47, 47);
+    }
+
+
+
     #page-content-wrapper{
          margin-top: 0px;
     }
@@ -96,6 +177,14 @@ img{
     #nav-collapse li:hover{
         color:#fff;
         background-color: 
+    }
+
+    #nav-collapse>.menu{
+        margin-top: 20px;
+    }
+
+    .blog-post h1{
+        font-size: 1.8em;
     }
 
 }

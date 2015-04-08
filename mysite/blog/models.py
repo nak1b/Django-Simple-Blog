@@ -1,3 +1,5 @@
+import random
+
 from django.db import models
 
 # Create your models here.
@@ -5,6 +7,13 @@ from django.db import models
 class PostEntryQuery(models.QuerySet):
 	def published(self):
 		return self.filter(published=True)
+
+	def randomPost(self):
+		return self.published().order_by('?')[:3]
+
+	def getFeaturedPost(self):
+		return self.published().latest('created')
+	
 
 
 class PostEntry(models.Model):

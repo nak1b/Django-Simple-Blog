@@ -1,0 +1,17 @@
+{%if randomPosts %}
+	
+	{% for randomPost in randomPosts %}
+		<div class="col-md-4">
+			<a href="/blog/{{ randomPost.slug }}/">
+				<div class="thumbnail">
+					<div class="caption">
+						<h4>{{ randomPost.title }}</h4>
+						<i class="fa fa-plus"></i>
+					</div>
+					<img  src="/blog/{{randomPost.hero_image.url}}">
+				</div>
+			</a>
+		</div>
+	{% endfor %}
+
+{% endif %}
