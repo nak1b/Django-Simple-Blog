@@ -36,6 +36,7 @@
 
 .blog-post h1{
     font-size: 1.5em;
+    text-transform: capitalize;
 }
 
 .blog-post img{
@@ -45,7 +46,7 @@
 
 .blog-post a{
     color: #333;
-    text-transform: capitalize;
+   
 }
 
 .blog-post a:hover{

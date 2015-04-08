@@ -1,7 +1,14 @@
 {% extends "blog/base.html" %}
 
+{% if  article %}
 
-{% block blog_entries %}
-	<h1>{{article.title}}</h1>
-	<p>{{article.post_body}}</p>
-{% endblock %}
+	{% block blog_entries %}
+		<div class="col-lg-12 blog-post">
+            <h1>{{ article.title }}</h1>
+            <p class="blog-post-meta"><span class="post-time"><i class="fa fa-clock-o"></i> {{article.created | date:'j F Y'}} </span><span class="post-author"> By <i class="fa fa-user"></i> <a href="#">{{article.author}}</a></span></p>
+            <img src="/blog/{{article.hero_image.url}}" class="hero_image">
+            <p>{{ article.post_body | linebreaks }}</p>   
+        </div>
+	{% endblock %}
+
+{% endif %}
