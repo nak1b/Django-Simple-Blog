@@ -78,10 +78,14 @@
 }
 
 
+
 .blog-post .post-author, .blog-post .post-time, .tags{
     margin-right: 20px;
 }
 
+.blog-post-single img{
+      display: none;
+}
 
 img{
     max-width: 100%;
@@ -230,6 +234,12 @@ img{
         margin: 5px auto;
         margin-bottom: 15px;
         float: none;
+    }
+
+    .blog-post-single img{
+        display: block;
+        float: right;
+        margin: 20px 0 15px 15px;
     }
 
 }
