@@ -5,8 +5,9 @@ from . import models
 
 def Index(request):
 	posts = models.PostEntry.objects.published().order_by('-created')
-	randomPosts = models.PostEntry.objects.randomPost() 
-	context = {'posts': posts, 'randomPosts': randomPosts}
+	randomPosts = models.PostEntry.objects.randomPost()
+	featuredPost = models.PostEntry.objects.getFeaturedPost()
+	context = {'posts': posts, 'randomPosts': randomPosts, 'featuredPost': featuredPost}
 	return  render(request, 'blog/index.html', context)
 	
 def Article(request, article_slug):

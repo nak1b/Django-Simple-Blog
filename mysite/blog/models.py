@@ -12,7 +12,7 @@ class PostEntryQuery(models.QuerySet):
 		return self.published().order_by('?')[:3]
 
 	def getFeaturedPost(self):
-		return self.published().latest('created')
+		return random.choice(self.published())
 	
 
 class PostTag(models.Model):
