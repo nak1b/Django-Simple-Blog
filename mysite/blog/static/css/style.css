@@ -7,8 +7,8 @@
 }
 
 .navbar-brand{
-    letter-spacing: 0.2em;
-    font-size: 1.5em;
+    letter-spacing: 0.15em;
+    font-size: 1.4em;
 }
 
 #navigation li{
@@ -98,6 +98,11 @@ img{
 
 }
 
+.navbar-brand span{
+    font-size: 0.9em;
+    padding-right: 8px;
+}
+
 /* Featured post styles*/
 
 #featured-post{
@@ -184,17 +189,17 @@ img{
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 300px;
     }
 
   
     #sidebar-wrapper {
-        width: 250px;
+        width: 300px;
     }
 
     
     #page-content-wrapper, #related-posts {
-        padding: 20px;
+        padding: 20px 35px;
         position: relative;
     }
     #related-posts{
@@ -202,18 +207,18 @@ img{
     }
     #navigation{
         float: none;
-        width: 250px;
+        width: 300px;
         height: 100%;
 
     }
 
     #navigation li{
-        width: 250px;
+        width: 300px;
         float: none;
     }
 
     .navbar-brand{
-        width:250px;
+        width:300px;
         background: rgb(47, 47, 47);
     }
 
