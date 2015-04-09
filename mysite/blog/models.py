@@ -9,7 +9,7 @@ class PostEntryQuery(models.QuerySet):
 		return self.filter(published=True)
 
 	def randomPost(self):
-		return self.published().order_by('?')[:3]
+		return self.published().order_by('?')[:4]
 
 	def getFeaturedPost(self):
 		return random.choice(self.published())
