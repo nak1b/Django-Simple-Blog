@@ -12,7 +12,7 @@
                 </span>
                 </p>
             <img src="{{post.hero_image.url}}" class="hero_image">
-            <p>{{ post.post_body| markdown | truncatewords:200 }}</p>
+            <p>{{ post.post_body| markdown | truncatewords:160 }}</p>
             <a href="/blog/{{ post.slug }}/" class="btn btn-default read-more">Continue Reading &raquo;</a>      
         </div>
     {% endfor %}

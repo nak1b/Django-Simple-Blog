@@ -232,12 +232,13 @@ img{
         padding: 15px;
         border: 1px solid #e3e3e3;
         margin: 5px auto;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         float: none;
     }
 
     .blog-post-single img{
         display: block;
+        width: 300px;
         float: right;
         margin: 20px 0 15px 15px;
     }
